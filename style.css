@@ -1,0 +1,466 @@
+*{
+    margin: 0;
+    padding:  0;
+    text-decoration: none;
+    list-style: none;
+    font-family: 'Roboto', sans-serif;
+}
+
+
+body{}
+
+#header{
+    display: flex;
+    min-height: 100vh;
+    background: linear-gradient(rgba(255, 255, 255, 0.212),rgba(255, 255, 255, 0.233)
+    ), url(img/banner_silver_mercedes.jpg)center/cover fixed no-repeat;
+    flex-direction: column;  /*em colunas */
+}
+ 
+nav{
+    position: fixed;
+    width: 100%;
+    z-index: 10; /*imagina uma lista ordenada, vc colocando esse elemento faz furar a fila e ficar na frente */
+    box-shadow: 0 25px 20px -20px rgba(0, 0, 0, 0.425);
+    background: rgb(221, 220, 220);
+    
+}   
+
+/* ===== ESTILO HEADER PARA CELL ====*/
+.nav_container{
+    display: flex;
+    justify-content: space-between;
+    height: auto;
+    padding: 0 20px;
+    border-top: 5px solid #000;
+}
+
+.nav_container img{
+    display: flex;
+    width: 222px;
+    height: auto;
+    align-self: center;
+    justify-content: space-between;
+ }
+
+.btn{
+    display: inline-block;
+    padding: 5px 5px 5px 5px;
+    border: 2px solid #000;
+    align-self: center;
+}
+.btn i{ 
+    font-size: 18px;
+}
+
+/* ==== ESTILO HEADER DESKTOP ====*/
+.logo_desktop{
+    display: none;
+}
+
+.logo_desktop img {}
+
+nav ul {
+display: none;
+
+}
+
+nav ul li {}
+
+nav ul li a {
+    display: block;
+    background: #ccc;
+    padding: 20px;
+    text-transform: uppercase;
+    color: black;
+    transition: all .7s ease;
+    font-size: 16px;
+}
+
+nav ul li a:hover{
+    background: #000;
+    color: #fff;
+    padding-left: 30px;
+}
+
+@media screen and (min-width:1024px){
+
+    .nav_container{
+        display: none;
+    }
+
+    .logo_desktop{
+        display: flex;
+    }
+
+    nav{
+        display: flex;
+        justify-content: center;
+    }
+
+    nav ul {
+        display: flex;
+        
+    }
+
+    nav ul li a{
+        font-size: 12px;
+        background: #eee;
+
+    }
+    .services-text{
+        background:none !important;
+      
+    }
+
+}
+
+/* ===== ESTILO DESKTOP ===== */
+@media screen and (min-width:1336px){
+    .nav_container{
+        display: none;
+    }
+
+    nav{
+         display: flex;
+         justify-content: center;
+         border-top: 5px solid #000;
+         box-shadow: 0 25px 20px -20px rgba(0, 0, 0, 0.473);
+    }
+
+    .nav_container{
+        background: #eee;
+    }
+
+    .logo_desktop{
+        display: flex;
+        margin-right: 20px;
+    }
+
+    nav ul{
+        display: flex!important;
+        flex-wrap: wrap;
+        justify-content: center;
+        background: #eee;
+    }
+    nav ul li a{
+        font-size: 16px;
+        background: #eee;
+        margin-left: 40px;
+        box-shadow:  0px 25px 20px -20px rgba(0, 0, 0, 0.39);
+    }
+    .nav_container img{
+        display: flex !important;
+        max-width: 226px;
+        width: 100%;
+    }
+    /*parte ainda nao feita */
+    .services-center{
+        width: 50%;
+    }
+    .services-center p{
+        width: 90%;
+    }
+
+}
+
+
+/* ==== ESTILO BANNER HEADER ====*/
+.banner{
+    display: flex;
+    flex: 1 0 auto;
+    justify-content: center;
+    align-items: center; /*centraliza os elementos no meio da página */
+    text-align: center;
+}
+
+.banner_icons {
+    padding: 20px;
+}
+
+.banner_icons h1{
+    font-size: 50px;
+    text-transform: uppercase;
+    color: rgb(34, 34, 34);
+}
+
+.and { /*span*/
+    color: rgb(87, 84, 84);
+}
+
+.banner_icons h3 {
+    font-size: 30px;
+    text-transform: capitalize;
+    color: #0a0e11;
+}
+
+.banner_icons{
+    padding: 20px;
+}
+
+.banner_icons a{
+    display: inline-block;
+    font-size: 30px;
+    padding: 5px 10px;
+    margin: 0 10px;
+    text-align: center;
+    color: #333;
+    background: #ddd;
+    border-radius: 50%;
+    transition: color 1s ease , transform 1s ease;
+}
+.banner_icons a:hover {
+    color:#000;
+    transform: translateY(-10px);
+}
+
+/* ===== Estilo Serveces ===== */
+.services{
+    display: flex;
+    background: url(img/velocimetro.jpg)center/cover fixed no-repeat;
+    min-height: 80vh;
+    align-items: center; /*centralizar no meio dos 80vh */
+}
+
+.services-center{
+    width: 100%; /*largura onde o texto vai pegar total. */
+}
+
+.service{ /*article */
+    display: flex;
+    margin: 40px;
+    color: #fff;
+}
+.services-ico{
+    align-self: center;
+    font-size: 50px;
+    border-radius: 50%;
+    border: 3px solid #fff;
+    padding: 20px;
+    margin-right: 20px;
+}
+
+.service a {
+    color: #fff;
+}
+
+.services-text{
+    background-color:rgba(78, 74, 74, 0.336) ;
+    padding:10px;
+    border-radius: 10px;
+}
+
+.services-text h3 {
+    text-transform: uppercase;
+    letter-spacing: .2em;
+}
+
+.services-text p {
+    line-height: 2; 
+    margin-top: 5px;
+}
+
+/* ===== Estilo Projetos ====*/
+.projeto{
+    background: #fff;
+}
+
+.title{ /*vai ser usado nas outras áreas também*/
+    padding: 50px 0;
+}
+
+.title h2 {
+    position: relative;
+    font-size: 40px;
+    text-align:center;
+    text-transform: uppercase;
+    color: #333;
+}
+.title h2::after{ /*para fazer o traço logo a baixo do titulo*/
+    content: '';
+    background: #000;
+    width: 100px;
+    height: 5px;
+    position: absolute;
+    bottom:0px;
+    left: 50%;
+    transform: translate(-50%)
+}
+
+.projects-center{  
+
+    /*vai ser usadod entro do midia query p/ deixar com grid */
+}
+
+.project{ /*artcile */
+    background: linear-gradient(rgba(0,0,0,0.9),rgba(0,0,0,0.9));
+    overflow: hidden;
+}
+.project img {
+    width: 100%;
+    display: block;
+    transition: all 2s;
+    
+}
+.project img:hover {
+    /*zoom na foto*/
+    cursor: pointer;
+    transform: scale(1.3);
+    opacity: .3;
+}
+
+@media screen and (min-width:576px){
+    .projects-center{
+        display: grid;
+        /*deixar como colunas os grid */
+        grid-template-columns: 1fr 1fr;/* os 1FR 1FR simboliza as colunas 2 */
+
+    }
+}
+
+@media screen and (min-width:992px){
+    .projects-center{
+        grid-template-columns: repeat(3, 1fr); /*abreviação do 1FR*3 */
+    }  
+}
+
+/* ==== Estilo sobre nós ==== */
+
+.about{
+    display: flex;
+    min-height: 100vh;
+    background: url(img/estrada.jpg)center/cover fixed no-repeat;
+    justify-content: center;
+    align-items: center;
+}
+
+.about-card{
+    background: rgba(255,255,255,0.6);
+    padding: 60px 40px;
+    text-align: center;
+}
+
+.about-card h3{
+    font-size: 40px;
+    text-transform: capitalize;
+}
+
+.about-card p {
+    line-height: 1.5;
+    font-size: 17px;
+}
+
+.about-card .fa-car{
+    font-size: 60px;
+    color: #333;
+    margin: 20px 0;
+}
+
+@media screen and (min-width:776px) {
+    .about-card{
+        max-width: 50%;
+        border-radius: 20px;
+    }
+
+    .about-card p{
+        max-width: 70%;
+        margin: 0 auto;
+    }
+    
+}
+
+/* ==== ESTILO FILTER  FOTO DO CARRO SEPRAR */
+.filler{
+    height: 50vh;
+    background: url(img/filler.jpg)center/cover fixed no-repeat;
+}
+
+/* ==== Estilo  Contato ===== */
+
+.contact{
+    min-height: 80vh;
+    background: url(img/estrada.jpg)center/cover fixed no-repeat;
+    display: flex;
+    justify-content: center;
+}
+
+.contact-card{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0,0,0,0.4);
+    flex:0 0 80%;
+
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    flex: 0 0 60%;    
+}
+
+form h3 {
+    color: rgb(224, 224, 224);
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: .2em;
+    
+}
+
+form input {
+    margin: 10px 0;
+} 
+
+form input, textarea{
+    padding: 5px;
+    border: 1px solid #000;
+}
+
+input::placeholder, textarea::placeholder{
+    text-transform: uppercase; 
+    color: #333;
+    font-size: 12px;    
+}
+
+.form-btn{
+    background-color: rgba(51, 51, 51, 0.986);
+    color: #fff;
+    font-size: 20px;
+    margin: 20px;
+    border-radius: 4px;
+    padding: 5px;
+    cursor: pointer;
+    transition: all .8s;
+}
+
+.form-btn:hover{
+    color: #333;
+    background-color: #fff;
+}
+
+ /* ===== Estilo footer ==== */
+footer{
+    min-height: 5vh;
+    background: url(img/bgrodape.png)no-repeat center;
+    text-align: center;
+    padding: 20px 0;
+}
+
+.footer-icons{}
+
+.footer-icons a{
+    color: #333;
+    display: inline-block;
+    font-size: 30px;
+    margin: 0 10px 80px 10px;
+    padding: 2px 5px;
+    background: #fff
+
+}
+
+.footer-icons p{
+    color: #333;
+    font-size: 20px;
+}
+
+/*EEEE FIIMM */
